@@ -151,6 +151,87 @@ export default function Home() {
     </svg>
   );
 
+  // Emotion vector icons (simple, clean, aesthetic)
+  const HappyIcon = ({ className = '' }: { className?: string }) => (
+    <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" fill="none" />
+      <path d="M8 14c1.2 1.2 2.8 2 4 2s2.8-.8 4-2" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M9 10h.01M15 10h.01" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+    </svg>
+  );
+
+  const SadIcon = ({ className = '' }: { className?: string }) => (
+    <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" fill="none" />
+      <path d="M8 16c1.2-1.2 2.8-2 4-2s2.8.8 4 2" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M9 10h.01M15 10h.01" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+    </svg>
+  );
+
+  const AngryIcon = ({ className = '' }: { className?: string }) => (
+    <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" fill="none" />
+      <path d="M8 10s1-2 4-2 4 2 4 2" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M9 15h6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+      <path d="M8.5 9l-1-1" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+      <path d="M15.5 9l1-1" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+    </svg>
+  );
+
+  const NeutralIcon = ({ className = '' }: { className?: string }) => (
+    <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" fill="none" />
+      <path d="M9 14h6" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+      <path d="M9 10h.01M15 10h.01" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+    </svg>
+  );
+
+  const SurpriseIcon = ({ className = '' }: { className?: string }) => (
+    <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" fill="none" />
+      <circle cx="12" cy="13" r="2" fill="currentColor" />
+      <path d="M9 9h.01M15 9h.01" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+    </svg>
+  );
+
+  const FearIcon = ({ className = '' }: { className?: string }) => (
+    <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" fill="none" />
+      <path d="M9 9h.01M15 9h.01" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+      <path d="M8 15c1.2-2 5.8-2 7 0" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+    </svg>
+  );
+
+  const DisgustIcon = ({ className = '' }: { className?: string }) => (
+    <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" fill="none" />
+      <path d="M8 15c1.5-1 4.5-1 6 0" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+      <path d="M9 9h.01M15 9h.01" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+    </svg>
+  );
+
+  const NoFaceIcon = ({ className = '' }: { className?: string }) => (
+    <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+      <path d="M12 12a3 3 0 100-6 3 3 0 000 6z" fill="currentColor" />
+      <path d="M4 20c1-4 7-6 8-6s7 2 8 6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+    </svg>
+  );
+
+  const DetectingIcon = ({ className = '' }: { className?: string }) => (
+    <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.2" fill="none" />
+      <path d="M12 6v6l3 3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+
+  const CameraIcon = ({ className = '' }: { className?: string }) => (
+    <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+      <rect x="3" y="6" width="18" height="12" rx="2" stroke="currentColor" strokeWidth="1.4" fill="none" />
+      <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="1.4" fill="none" />
+      <path d="M7 6l1.5-2h7L17 6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+    </svg>
+  );
+
   useEffect(() => {
     // Cleanup webcam on unmount
     return () => {
@@ -308,9 +389,10 @@ export default function Home() {
       console.log('📹 Requesting camera access...');
       const stream = await navigator.mediaDevices.getUserMedia({
         video: {
-          width: { ideal: 640 },
-          height: { ideal: 480 },
-          facingMode: 'user'
+          width: { ideal: 1280, min: 640 },
+          height: { ideal: 720, min: 480 },
+          facingMode: 'user',
+          frameRate: { ideal: 30, min: 15 }
         }
       });
 
@@ -342,6 +424,13 @@ export default function Home() {
         setWebcamEnabled(true);
         setCameraStatus('Camera active - detecting emotions...');
         console.log('📹 Webcam enabled, starting emotion detection interval');
+
+        // Add initial instruction
+        setTimeout(() => {
+          if (currentEmotion === 'neutral' || currentEmotion === 'no_face') {
+            setCameraStatus('Tip: Ensure good lighting and center your face in the camera for better detection');
+          }
+        }, 3000);
 
         // Start emotion detection with a slight delay to ensure first frame is ready
         setTimeout(() => {
@@ -528,6 +617,8 @@ export default function Home() {
       if (response.ok) {
         const result = await response.json();
         console.log('Emotion detection successful:', result);
+        console.log('Raw emotion from backend:', result.emotion);
+        console.log('Confidence:', result.confidence);
         // Keep raw response for debugging
         setLastEmotionRaw(result);
 
@@ -557,7 +648,15 @@ export default function Home() {
 
         setCurrentEmotion(rawEmotion || (result && result.emotion ? result.emotion : 'neutral'));
         setEmotionConfidence(confNum || 0);
-        setCameraStatus('');
+
+        // Provide helpful feedback based on the result
+        if (rawEmotion === 'no_face') {
+          setCameraStatus('No face detected - please ensure your face is clearly visible in the camera');
+        } else if (rawEmotion === 'neutral' && confNum < 0.3) {
+          setCameraStatus('Low confidence detection - try better lighting or center your face');
+        } else {
+          setCameraStatus('');
+        }
       } else {
         const errorText = await response.text();
         console.error(`Emotion detection failed with status ${response.status}:`, errorText);
@@ -892,7 +991,9 @@ export default function Home() {
                       ? 'Emotion Detection Unavailable'
                       : currentEmotion === 'detecting'
                       ? 'Detecting...'
-                      : `${currentEmotion} (${(emotionConfidence * 100).toFixed(1)}%)`
+                      : currentEmotion === 'no_frame'
+                      ? 'No Face Detected'
+                      : currentEmotion.charAt(0).toUpperCase() + currentEmotion.slice(1)
                   }
                 </span>
               </div>
@@ -1061,7 +1162,17 @@ export default function Home() {
                 className={`btn ${webcamEnabled ? 'btn-danger' : 'btn-secondary'} px-4`}
                 title={webcamEnabled ? 'Stop webcam' : 'Start webcam for emotion detection'}
               >
-                {webcamEnabled ? '📷 Stop' : '📷 Start'}
+                  {webcamEnabled ? (
+                    <div className="flex items-center gap-2">
+                      <CameraIcon className="w-4 h-4" />
+                      <span>Stop</span>
+                    </div>
+                  ) : (
+                    <div className="flex items-center gap-2">
+                      <CameraIcon className="w-4 h-4" />
+                      <span>Start</span>
+                    </div>
+                  )}
               </button>
               <button
                 onClick={sendMessage}
@@ -1115,22 +1226,31 @@ export default function Home() {
                     <div className="status-dot active animate-pulse"></div>
                     <span>Camera Active</span>
                   </div>
+                  {cameraStatus && (
+                    <div className="camera-instructions">
+                      <small className="text-xs text-gray-600 bg-white bg-opacity-80 px-2 py-1 rounded flex items-center gap-2">
+                        <LightbulbIcon className="w-4 h-4 text-gray-700" />
+                        <span>{cameraStatus}</span>
+                      </small>
+                    </div>
+                  )}
                 </div>
               </div>
 
               {/* Emotion Monitor - Below Camera */}
               <div className="emotion-monitor">
                 <div className="emotion-display">
-                  <div className="emotion-icon">
-                    {currentEmotion === 'happy' && '😊'}
-                    {currentEmotion === 'sad' && '😢'}
-                    {currentEmotion === 'angry' && '😠'}
-                    {currentEmotion === 'fear' && '😨'}
-                    {currentEmotion === 'surprise' && '😲'}
-                    {currentEmotion === 'neutral' && '😐'}
-                    {currentEmotion === 'disgust' && '🤢'}
-                    {(currentEmotion === 'detecting' || currentEmotion === 'backend_unavailable' || currentEmotion === 'server_error') && '🤔'}
-                    {!currentEmotion && '👤'}
+                  <div className="emotion-icon" aria-hidden>
+                    {currentEmotion === 'happy' && <HappyIcon className="w-12 h-12 text-emerald-600" />}
+                    {currentEmotion === 'sad' && <SadIcon className="w-12 h-12 text-sky-600" />}
+                    {currentEmotion === 'angry' && <AngryIcon className="w-12 h-12 text-rose-600" />}
+                    {currentEmotion === 'fear' && <FearIcon className="w-12 h-12 text-indigo-600" />}
+                    {currentEmotion === 'surprise' && <SurpriseIcon className="w-12 h-12 text-yellow-600" />}
+                    {currentEmotion === 'neutral' && <NeutralIcon className="w-12 h-12 text-gray-700" />}
+                    {currentEmotion === 'disgust' && <DisgustIcon className="w-12 h-12 text-lime-700" />}
+                    {currentEmotion === 'no_face' && <NoFaceIcon className="w-12 h-12 text-gray-500" />}
+                    {(currentEmotion === 'detecting' || currentEmotion === 'backend_unavailable' || currentEmotion === 'server_error' || currentEmotion === 'emotion_unavailable') && <DetectingIcon className="w-12 h-12 text-gray-400 animate-pulse" />}
+                    {(!currentEmotion || currentEmotion === '') && <NoFaceIcon className="w-12 h-12 text-gray-500" />}
                   </div>
                   <div className="emotion-details">
                     <div className="emotion-label">
@@ -1144,38 +1264,26 @@ export default function Home() {
                           ? 'Detection Unavailable'
                           : currentEmotion === 'detecting'
                           ? 'Analyzing...'
+                          : currentEmotion === 'no_face'
+                          ? 'No Face Detected'
                           : currentEmotion
                           ? currentEmotion.charAt(0).toUpperCase() + currentEmotion.slice(1)
-                          : 'No Detection'}
+                          : 'Ready'}
                       </div>
-                      {(
-                        (smoothedEmotion && smoothedEmotion !== 'detecting') ||
-                        (currentEmotion && currentEmotion !== 'detecting' && currentEmotion !== 'backend_unavailable' && currentEmotion !== 'server_error' && currentEmotion !== 'emotion_unavailable')
-                      ) && (
-                        <div className="emotion-confidence">
-                          Confidence: {((smoothedConfidence || emotionConfidence) * 100).toFixed(1)}%
-                        </div>
-                      )}
                   </div>
                 </div>
                 <div className="emotion-status">
                   <div className={`status-dot ${currentEmotion === 'detecting' ? 'analyzing' : 'active'}`}></div>
                   <span>Live Emotion Monitoring Active</span>
                 </div>
-                {/* Raw response for debugging */}
-                {lastEmotionRaw && (
-                  <pre className="raw-response" style={{color: 'var(--text-secondary)', marginTop: '0.75rem', fontSize: '0.8rem'}}>
-                    {JSON.stringify(lastEmotionRaw, null, 2)}
-                  </pre>
-                )}
               </div>
             </div>
           ) : (
-            <div className="camera-placeholder">
-              <div className="placeholder-content">
-                <div className="camera-icon">📷</div>
-                <h3 className="placeholder-title">Camera Off</h3>
-                <p className="placeholder-text">Click "Start" to enable camera and emotion detection</p>
+            <div className="camera-placeholder flex items-center justify-center h-full">
+              <div className="placeholder-content flex flex-col items-center justify-center gap-4 text-center p-6">
+                <div className="camera-icon mb-2"><CameraIcon className="w-14 h-14 text-gray-400" /></div>
+                <h3 className="placeholder-title text-lg font-semibold text-white">Camera Off</h3>
+                <p className="placeholder-text text-sm text-gray-400">Click "Start" to enable camera and emotion detection</p>
               </div>
             </div>
           )}

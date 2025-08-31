@@ -44,6 +44,7 @@ frontend/node_modules/
 frontend/.next/
 frontend/.turbo/
 frontend/.parcel-cache/
+package-lock.json
 
 # Backend
 backend/__pycache__/

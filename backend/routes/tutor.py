@@ -542,17 +542,47 @@ async def detect_emotion(image_data: dict):
 
         # Short-circuit for test/mock mode to avoid heavy ML deps during CI/tests
         if os.environ.get('USE_MOCK_DETECTOR') == '1':
-            # Return a deterministic, JSON-serializable response for tests
+            # Use a lightweight deterministic in-process detector for fast CI/local tests
+            def dummy_detect_emotion(img_np):
+                # img_np expected as BGR or grayscale numpy array
+                try:
+                    # compute approximate luminance
+                    if img_np.ndim == 3 and img_np.shape[2] >= 3:
+                        b = img_np[..., 0].astype(float)
+                        g = img_np[..., 1].astype(float)
+                        r = img_np[..., 2].astype(float)
+                        lum = 0.2126 * r + 0.7152 * g + 0.0722 * b
+                    else:
+                        lum = img_np.astype(float)
+                    avg = float(lum.mean())
+                except Exception:
+                    avg = 0.0
+
+                # simple heuristic mapping
+                if avg > 150:
+                    return ("happy", 0.9)
+                if avg > 90:
+                    return ("neutral", 0.6)
+                if avg > 40:
+                    return ("sad", 0.45)
+                return ("no_face", 0.0)
+
+            emo_label, emo_conf = dummy_detect_emotion(image_np)
             return {
-                "emotion": "neutral",
-                "confidence": 0.8,
+                "emotion": str(emo_label),
+                "confidence": float(emo_conf),
                 "timestamp": float(time.time())
             }
 
         if EMOTION_AVAILABLE:
+            logging.info("Using DeepFace for emotion detection")
             try:
                 # Use DeepFace for emotion detection
                 result = DeepFace.analyze(image_np, actions=['emotion'], enforce_detection=False)
+                logging.info(f"DeepFace result: {result}")
+                logging.info(f"Image shape: {image_np.shape}")
+                logging.info(f"Image dtype: {image_np.dtype}")
+                logging.info(f"Image min/max values: {image_np.min()}/{image_np.max()}")
                 # DeepFace may return a dict or a list containing a dict depending on version/options
                 res_obj = None
                 if isinstance(result, list) and len(result) > 0:

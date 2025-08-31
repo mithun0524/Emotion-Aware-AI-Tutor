@@ -1,4 +1,5 @@
 import base64
+import base64
 import io
 from PIL import Image
 import requests
@@ -18,4 +19,3 @@ def test_emotion_endpoint():
     assert 'confidence' in j
     assert isinstance(j['emotion'], str)
     assert isinstance(j['confidence'], (int, float))
-*** End Patch
