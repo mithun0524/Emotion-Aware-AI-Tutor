@@ -47,11 +47,21 @@ jobs:
           pip install flake8
           flake8 --max-line-length=120 || true
 
-      - name: Start backend server
+      - name: Start backend server (mock detector)
         working-directory: backend
         run: |
-          nohup python -m uvicorn main:app --host 127.0.0.1 --port 8000 &
-          sleep 3
+          # Start backend with mock detector for fast tests
+          nohup env USE_MOCK_DETECTOR=1 python -m uvicorn main:app --host 127.0.0.1 --port 8000 &
+          # wait for server to be ready with retries
+          for i in 1 2 3 4 5; do
+            sleep 2
+            if python -c "import requests,sys;r=requests.get('http://127.0.0.1:8000/api/status',timeout=2); sys.exit(0) if r.status_code==200 else sys.exit(1)" >/dev/null 2>&1; then
+              echo 'backend ready'
+              break
+            else
+              echo 'waiting for backend...'
+            fi
+          done
 
       - name: Run backend tests (pytest)
         working-directory: backend

@@ -540,6 +540,15 @@ async def detect_emotion(image_data: dict):
         emotion = "neutral"  # Default
         confidence = 0.0
 
+        # Short-circuit for test/mock mode to avoid heavy ML deps during CI/tests
+        if os.environ.get('USE_MOCK_DETECTOR') == '1':
+            # Return a deterministic, JSON-serializable response for tests
+            return {
+                "emotion": "neutral",
+                "confidence": 0.8,
+                "timestamp": float(time.time())
+            }
+
         if EMOTION_AVAILABLE:
             try:
                 # Use DeepFace for emotion detection
