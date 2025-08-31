@@ -1,0 +1,6 @@
+# Development and testing dependencies
+black==24.9.0
+flake8==6.1.0
+pytest==8.4.3
+pytest-asyncio==0.22.0
+httpx==0.24.1

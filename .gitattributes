@@ -1,0 +1,5 @@
+# Ensure consistent line endings
+* text=auto
+
+# Treat markdown as text
+*.md text
